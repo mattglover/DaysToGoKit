@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B29FF67C20BF33DA00255640 /* DaysToGoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FF67220BF33DA00255640 /* DaysToGoKit.framework */; };
-		B29FF68120BF33DA00255640 /* DaysToGoKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF68020BF33DA00255640 /* DaysToGoKitTests.swift */; };
 		B29FF68320BF33DA00255640 /* DaysToGoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B29FF67520BF33DA00255640 /* DaysToGoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B29FF69020BF34F500255640 /* DaysToGoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF68F20BF34F500255640 /* DaysToGoService.swift */; };
+		B29FF69220BF351600255640 /* DaysToGoEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69120BF351600255640 /* DaysToGoEvent.swift */; };
+		B29FF69420BF352A00255640 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69320BF352A00255640 /* Event.swift */; };
+		B29FF69620BF359F00255640 /* DaysToGoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69520BF359F00255640 /* DaysToGoServiceProtocol.swift */; };
+		B29FF69920BF3DFA00255640 /* DaysToGoEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69820BF3DFA00255640 /* DaysToGoEventTests.swift */; };
+		B29FF69D20BF3EC900255640 /* DaysToGoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69C20BF3EC900255640 /* DaysToGoServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +32,14 @@
 		B29FF67520BF33DA00255640 /* DaysToGoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaysToGoKit.h; sourceTree = "<group>"; };
 		B29FF67620BF33DA00255640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B29FF67B20BF33DA00255640 /* DaysToGoKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaysToGoKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B29FF68020BF33DA00255640 /* DaysToGoKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoKitTests.swift; sourceTree = "<group>"; };
 		B29FF68220BF33DA00255640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29FF68F20BF34F500255640 /* DaysToGoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoService.swift; sourceTree = "<group>"; };
+		B29FF69120BF351600255640 /* DaysToGoEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoEvent.swift; sourceTree = "<group>"; };
+		B29FF69320BF352A00255640 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		B29FF69520BF359F00255640 /* DaysToGoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoServiceProtocol.swift; sourceTree = "<group>"; };
+		B29FF69720BF3DFA00255640 /* DaysToGoKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaysToGoKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B29FF69820BF3DFA00255640 /* DaysToGoEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoEventTests.swift; sourceTree = "<group>"; };
+		B29FF69C20BF3EC900255640 /* DaysToGoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +82,9 @@
 		B29FF67420BF33DA00255640 /* DaysToGoKit */ = {
 			isa = PBXGroup;
 			children = (
+				B29FF68D20BF34C200255640 /* Protocols */,
+				B29FF68C20BF34BB00255640 /* Models */,
+				B29FF68E20BF34D400255640 /* Services */,
 				B29FF67520BF33DA00255640 /* DaysToGoKit.h */,
 				B29FF67620BF33DA00255640 /* Info.plist */,
 			);
@@ -80,10 +94,53 @@
 		B29FF67F20BF33DA00255640 /* DaysToGoKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				B29FF68020BF33DA00255640 /* DaysToGoKitTests.swift */,
+				B29FF69A20BF3EA700255640 /* Models */,
+				B29FF69B20BF3EAE00255640 /* Services */,
 				B29FF68220BF33DA00255640 /* Info.plist */,
+				B29FF69720BF3DFA00255640 /* DaysToGoKitTests-Bridging-Header.h */,
 			);
 			path = DaysToGoKitTests;
+			sourceTree = "<group>";
+		};
+		B29FF68C20BF34BB00255640 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF69120BF351600255640 /* DaysToGoEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B29FF68D20BF34C200255640 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF69320BF352A00255640 /* Event.swift */,
+				B29FF69520BF359F00255640 /* DaysToGoServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		B29FF68E20BF34D400255640 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF68F20BF34F500255640 /* DaysToGoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B29FF69A20BF3EA700255640 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF69820BF3DFA00255640 /* DaysToGoEventTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B29FF69B20BF3EAE00255640 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B29FF69C20BF3EC900255640 /* DaysToGoServiceTests.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,9 +205,11 @@
 				TargetAttributes = {
 					B29FF67120BF33DA00255640 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					B29FF67A20BF33DA00255640 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -194,6 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29FF69220BF351600255640 /* DaysToGoEvent.swift in Sources */,
+				B29FF69620BF359F00255640 /* DaysToGoServiceProtocol.swift in Sources */,
+				B29FF69420BF352A00255640 /* Event.swift in Sources */,
+				B29FF69020BF34F500255640 /* DaysToGoService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B29FF68120BF33DA00255640 /* DaysToGoKitTests.swift in Sources */,
+				B29FF69920BF3DFA00255640 /* DaysToGoEventTests.swift in Sources */,
+				B29FF69D20BF3EC900255640 /* DaysToGoServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +403,7 @@
 		B29FF68720BF33DA00255640 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -357,6 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +431,7 @@
 		B29FF68820BF33DA00255640 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -391,6 +458,8 @@
 		B29FF68A20BF33DA00255640 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XR88US5DG4;
 				INFOPLIST_FILE = DaysToGoKitTests/Info.plist;
@@ -401,6 +470,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duchysoftware.DaysToGoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DaysToGoKitTests/DaysToGoKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -409,6 +480,8 @@
 		B29FF68B20BF33DA00255640 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XR88US5DG4;
 				INFOPLIST_FILE = DaysToGoKitTests/Info.plist;
@@ -419,6 +492,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.duchysoftware.DaysToGoKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DaysToGoKitTests/DaysToGoKitTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

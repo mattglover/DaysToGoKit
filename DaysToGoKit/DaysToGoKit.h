@@ -1,11 +1,3 @@
-//
-//  DaysToGoKit.h
-//  DaysToGoKit
-//
-//  Created by Matt Glover on 30/05/2018.
-//  Copyright © 2018 Matt Glover. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 
 //! Project version number for DaysToGoKit.
