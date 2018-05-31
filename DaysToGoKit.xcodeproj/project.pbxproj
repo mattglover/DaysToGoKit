@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B208B60C20C00EA7005A0DF5 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */; };
+		B208B60E20C033F5005A0DF5 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208B60D20C033F5005A0DF5 /* URLExtensions.swift */; };
+		B208B61020C0341F005A0DF5 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208B60F20C0341F005A0DF5 /* StringExtensions.swift */; };
 		B29FF67C20BF33DA00255640 /* DaysToGoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FF67220BF33DA00255640 /* DaysToGoKit.framework */; };
 		B29FF68320BF33DA00255640 /* DaysToGoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B29FF67520BF33DA00255640 /* DaysToGoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B29FF69020BF34F500255640 /* DaysToGoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF68F20BF34F500255640 /* DaysToGoService.swift */; };
@@ -32,6 +34,8 @@
 
 /* Begin PBXFileReference section */
 		B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
+		B208B60D20C033F5005A0DF5 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		B208B60F20C0341F005A0DF5 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		B29FF67220BF33DA00255640 /* DaysToGoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DaysToGoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FF67520BF33DA00255640 /* DaysToGoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaysToGoKit.h; sourceTree = "<group>"; };
 		B29FF67620BF33DA00255640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */,
+				B208B60D20C033F5005A0DF5 /* URLExtensions.swift */,
+				B208B60F20C0341F005A0DF5 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B29FF7CC20BFF34500255640 /* DaysToGoEventMetaData.swift in Sources */,
+				B208B60E20C033F5005A0DF5 /* URLExtensions.swift in Sources */,
 				B29FF69220BF351600255640 /* DaysToGoEvent.swift in Sources */,
+				B208B61020C0341F005A0DF5 /* StringExtensions.swift in Sources */,
 				B29FF69620BF359F00255640 /* DaysToGoServiceProtocol.swift in Sources */,
 				B29FF69420BF352A00255640 /* Event.swift in Sources */,
 				B208B60C20C00EA7005A0DF5 /* NotificationExtensions.swift in Sources */,

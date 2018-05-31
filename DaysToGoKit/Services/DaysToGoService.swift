@@ -5,19 +5,23 @@ fileprivate protocol EventMetaDataPersistance { }
 
 public class DaysToGoService: DaysToGoServiceProtocol {
 
-	private var allEventMetaDatas = [EventMetaData]() {
+	private var eventMetaDatas = [EventMetaData]() {
 		didSet {
 			NotificationCenter.default.post(name: .eventsUpdated, object: nil, userInfo: nil)
 		}
 	}
 
 	public init() {
-		allEventMetaDatas = loadEventMetaDatas()
+		eventMetaDatas = loadEventMetaDatas()
 	}
 
 	public func createNewEvent(date: Date, title: String) -> Event {
 		let event = DaysToGoEvent(date: date, title: title)
 		return event
+	}
+
+	public func allEventMetaDatas() -> [EventMetaData] {
+		return eventMetaDatas.sorted(by: { $0.date < $1.date } )
 	}
 }
 
@@ -75,14 +79,14 @@ extension DaysToGoService: EventPersistance {
 			if success {
 				// if successful then update EventMetaDatas and save that
 				let eventMetaData = DaysToGoEventMetaData(id: event.id, date: event.date, title: event.title)
-				if let indexOfEventMetaData = self.allEventMetaDatas.index(where: {$0.id == event.id}) {
-					self.allEventMetaDatas[indexOfEventMetaData] = eventMetaData
+				if let indexOfEventMetaData = self.eventMetaDatas.index(where: {$0.id == event.id}) {
+					self.eventMetaDatas[indexOfEventMetaData] = eventMetaData
 					NotificationCenter.default.post(name: .eventUpdated, object: nil, userInfo: ["event" : event])
 				} else {
-					self.allEventMetaDatas.append(eventMetaData)
+					self.eventMetaDatas.append(eventMetaData)
 					NotificationCenter.default.post(name: .eventAdded, object: nil, userInfo: ["event" : event])
 				}
-				self.saveEventMetaDatas(eventMetaDatas: self.allEventMetaDatas, completion: { (success) in
+				self.saveEventMetaDatas(eventMetaDatas: self.eventMetaDatas, completion: { (success) in
 					DispatchQueue.main.async {
 						completion(success)
 					}
@@ -143,30 +147,9 @@ extension DaysToGoService: EventPersistance {
 	}
 }
 
-extension Array where Element:EventMetaData {
+extension Array where Element: EventMetaData {
 	func indexOfEventMetaData(withId id: UUID) -> Int? {
 		let index = self.index(where: {$0.id == id})
 		return index
-	}
-}
-
-extension URL {
-	static func eventFileURL(id: String) -> URL {
-		let documentsURL = String.documentsURL()
-		let eventFilename = "\(id).dat"
-		return documentsURL.appendingPathComponent(eventFilename, isDirectory: false)
-	}
-
-	static func eventMetaDateFileURL() -> URL {
-		let documentsURL = String.documentsURL()
-		let eventMetaDateFilename = "eventMetaDatas.dat"
-		return documentsURL.appendingPathComponent(eventMetaDateFilename, isDirectory: false)
-	}
-}
-
-extension String {
-	static func documentsURL() -> URL {
-		let fileManager = FileManager.default
-		return fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
 	}
 }
