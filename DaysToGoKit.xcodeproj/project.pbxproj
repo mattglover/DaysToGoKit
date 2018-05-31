@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B208B60C20C00EA7005A0DF5 /* NotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */; };
 		B29FF67C20BF33DA00255640 /* DaysToGoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29FF67220BF33DA00255640 /* DaysToGoKit.framework */; };
 		B29FF68320BF33DA00255640 /* DaysToGoKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B29FF67520BF33DA00255640 /* DaysToGoKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B29FF69020BF34F500255640 /* DaysToGoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF68F20BF34F500255640 /* DaysToGoService.swift */; };
@@ -15,6 +16,8 @@
 		B29FF69620BF359F00255640 /* DaysToGoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69520BF359F00255640 /* DaysToGoServiceProtocol.swift */; };
 		B29FF69920BF3DFA00255640 /* DaysToGoEventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69820BF3DFA00255640 /* DaysToGoEventTests.swift */; };
 		B29FF69D20BF3EC900255640 /* DaysToGoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF69C20BF3EC900255640 /* DaysToGoServiceTests.swift */; };
+		B29FF7CC20BFF34500255640 /* DaysToGoEventMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF7CB20BFF34500255640 /* DaysToGoEventMetaData.swift */; };
+		B29FF7CE20BFF37200255640 /* EventMetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FF7CD20BFF37200255640 /* EventMetaData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtensions.swift; sourceTree = "<group>"; };
 		B29FF67220BF33DA00255640 /* DaysToGoKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DaysToGoKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29FF67520BF33DA00255640 /* DaysToGoKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaysToGoKit.h; sourceTree = "<group>"; };
 		B29FF67620BF33DA00255640 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		B29FF69720BF3DFA00255640 /* DaysToGoKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaysToGoKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		B29FF69820BF3DFA00255640 /* DaysToGoEventTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoEventTests.swift; sourceTree = "<group>"; };
 		B29FF69C20BF3EC900255640 /* DaysToGoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoServiceTests.swift; sourceTree = "<group>"; };
+		B29FF7CB20BFF34500255640 /* DaysToGoEventMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysToGoEventMetaData.swift; sourceTree = "<group>"; };
+		B29FF7CD20BFF37200255640 /* EventMetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMetaData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B208B60A20C00AC9005A0DF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B208B60B20C00EA7005A0DF5 /* NotificationExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B29FF66820BF33DA00255640 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +96,7 @@
 		B29FF67420BF33DA00255640 /* DaysToGoKit */ = {
 			isa = PBXGroup;
 			children = (
+				B208B60A20C00AC9005A0DF5 /* Extensions */,
 				B29FF68D20BF34C200255640 /* Protocols */,
 				B29FF68C20BF34BB00255640 /* Models */,
 				B29FF68E20BF34D400255640 /* Services */,
@@ -105,6 +120,7 @@
 		B29FF68C20BF34BB00255640 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B29FF7CB20BFF34500255640 /* DaysToGoEventMetaData.swift */,
 				B29FF69120BF351600255640 /* DaysToGoEvent.swift */,
 			);
 			path = Models;
@@ -113,6 +129,7 @@
 		B29FF68D20BF34C200255640 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B29FF7CD20BFF37200255640 /* EventMetaData.swift */,
 				B29FF69320BF352A00255640 /* Event.swift */,
 				B29FF69520BF359F00255640 /* DaysToGoServiceProtocol.swift */,
 			);
@@ -253,10 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B29FF7CC20BFF34500255640 /* DaysToGoEventMetaData.swift in Sources */,
 				B29FF69220BF351600255640 /* DaysToGoEvent.swift in Sources */,
 				B29FF69620BF359F00255640 /* DaysToGoServiceProtocol.swift in Sources */,
 				B29FF69420BF352A00255640 /* Event.swift in Sources */,
+				B208B60C20C00EA7005A0DF5 /* NotificationExtensions.swift in Sources */,
 				B29FF69020BF34F500255640 /* DaysToGoService.swift in Sources */,
+				B29FF7CE20BFF37200255640 /* EventMetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
