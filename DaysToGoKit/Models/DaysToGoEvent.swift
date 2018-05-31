@@ -1,6 +1,6 @@
 import Foundation
 
-struct DaysToGoEvent: Event {
+struct DaysToGoEvent: Event, Codable {
 	private(set) var id: UUID
 	var date: Date = Date()
 	var title: String = ""

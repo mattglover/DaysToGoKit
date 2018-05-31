@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol Event {
+public protocol Event: Codable {
 	var id: UUID { get }
 	var date: Date { get set }
 	var title: String { get set }
