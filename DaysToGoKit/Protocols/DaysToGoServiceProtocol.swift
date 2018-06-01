@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol DaysToGoServiceProtocol {
+public protocol DaysToGoServiceProtocol : class {
 
 	func createNewEvent(date: Date, title: String) -> Event
 	func allEventMetaDatas() -> [EventMetaData]
